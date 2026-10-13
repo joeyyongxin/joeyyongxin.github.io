@@ -1,0 +1,241 @@
+/* Joey Chan portfolio — combined editorial developer design and detailed resume content */
+:root {
+  --paper: #fff; --ink: #111; --muted: #555; --soft: #777; --line: #e5e5e5;
+  --accent: #e2552d; --peach: #f8e3d9; --blue: #e0edf6; --green: #e4eee2;
+  --mono: "DM Mono", monospace; --sans: "DM Sans", sans-serif; --max: 1040px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+.accent{color:var(--accent)}
+.muted-heading{color:#858585}
+.eyebrow,.mono-label,.nav-links,.pill,.meta-label,.section-count,.project-meta,.art-caption,.project-link,.award-level,.award-foot,.case-steps,.site-footer,.skill-group h3,.education-list h3,.skill-caveat{font-family:var(--mono)}
+.eyebrow{margin:0 0 23px;color:var(--muted);font-size:10px;letter-spacing:1.2px;line-height:1.6}
+.status-dot{display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:var(--accent);vertical-align:1px}
+.eyebrow-divider{display:inline-block;width:28px;height:1px;background:var(--line);vertical-align:middle;margin:0 3px}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);border-bottom:1px solid rgba(229,229,229,.85);backdrop-filter:blur(12px)}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between}
+.wordmark{font-size:19px;font-weight:700;letter-spacing:-.8px}.wordmark span{color:var(--accent)}
+.nav-links{display:flex;gap:27px;align-items:center;font-size:11px;color:#555}
+.nav-links a{transition:color .2s}.nav-links a:hover,.text-link:hover,.social-links a:hover,.site-footer a:hover{color:var(--accent)}
+.menu-toggle{display:none;background:transparent;border:0;padding:9px;cursor:pointer}
+.menu-toggle span{display:block;width:22px;height:1px;background:var(--ink);margin:6px 0}
+.skip-link{position:absolute;top:-60px;left:18px;padding:12px 16px;background:var(--ink);color:#fff;z-index:50}.skip-link:focus{top:12px}
+.hero{min-height:610px;padding-top:83px;padding-bottom:65px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(48px,6.2vw,76px);font-weight:500;letter-spacing:-.075em;line-height:1.04;margin:0}
+.hero-lead{max-width:570px;color:#4f4f4f;font-size:14px;line-height:1.9;margin:25px 0 0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:24px;margin-top:24px}
+.text-link{font:11px var(--mono);color:#555;transition:color .2s}.primary-link{color:var(--accent)}.text-link span{margin-left:5px}
+.tag-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:27px}
+.pill{border:1px solid #dedede;border-radius:99px;padding:8px 10px;font-size:9px;color:#444}
+.hero-meta{display:flex;gap:34px;margin-top:31px;padding-top:18px;border-top:1px solid var(--line);max-width:490px}
+.hero-meta div{display:flex;flex-direction:column;gap:6px}.meta-label{font-size:8px;letter-spacing:1px;color:#888}.hero-meta strong{font-size:11px;font-weight:500}
+.hero-art{height:390px;position:relative;display:grid;place-items:center}
+.art-ring{position:absolute;border:1px solid #eee;border-radius:50%;transform:rotate(-25deg)}.ring-one{width:360px;height:270px}.ring-two{width:300px;height:370px;transform:rotate(30deg);border-style:dashed}
+.hero-card{width:265px;min-height:300px;position:relative;z-index:2;background:#fff;border:1px solid #e9e9e9;padding:18px 21px;transform:rotate(-4deg);box-shadow:12px 14px 0 rgba(226,85,45,.055)}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.window-dots{display:flex;gap:4px}.window-dots i{width:5px;height:5px;border-radius:50%;background:#ccc}
+.mono-label{font-size:8px;letter-spacing:.8px;color:var(--accent)}
+.monogram{font-size:83px;font-weight:700;letter-spacing:-9px;line-height:1.1;margin:35px 0 12px}.monogram span{color:var(--accent)}
+.hero-card p{font-size:18px;line-height:1.5;letter-spacing:-.5px;font-weight:600;margin:0}
+.card-bottom{display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:13px;margin-top:20px;color:#777;font:8px var(--mono);letter-spacing:.5px}
+.float-note{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;padding:11px 13px;background:#fff;border:1px solid var(--line);box-shadow:0 7px 25px #11111108}
+.float-note strong,.float-note small{display:block}.float-note strong{font-size:10px}.float-note small{font-size:8px;color:#777;margin-top:3px}
+.note-symbol{display:grid;place-items:center;width:30px;height:30px;background:var(--peach);color:var(--accent);font:10px var(--mono)}.note-symbol-light{background:var(--green);color:#456b49}
+.note-award{top:38px;right:-4px}.note-learning{bottom:35px;left:-3px}.art-cross{position:absolute;color:var(--accent);font-size:20px}.cross-one{top:47px;left:20px}.cross-two{right:30px;bottom:43px}
+.signal-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.signal-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.signal-inner span:not(.signal-label){font-size:11px;color:#555}.signal-label{font:9px var(--mono);letter-spacing:.7px;color:#888}.signal-inner i{width:3px;height:3px;border-radius:50%;background:#bbb}
+.section{padding-top:94px;padding-bottom:100px}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:18px}
+.section-eyebrow{color:var(--accent);margin-bottom:12px}
+h2{font-size:clamp(36px,4.5vw,55px);font-weight:500;letter-spacing:-.065em;line-height:1.1;margin:0}
+.section-count{font-size:9px;color:#777;padding-bottom:7px;white-space:nowrap}
+.section-intro{max-width:390px;color:#555;font-size:12px;line-height:1.9;margin:0 0 4px}.section-intro-wide{max-width:640px;margin:22px 0 30px}
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.project-card{min-width:0}
+.project-art{aspect-ratio:1.15/1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:transform .25s}
+.project-card:hover .project-art{transform:translateY(-4px)}
+.art-peach{background:var(--peach)}.art-blue{background:var(--blue)}.art-green{background:var(--green)}
+.art-caption{position:absolute;bottom:13px;left:14px;font-size:8px;letter-spacing:.8px;color:#555}
+.browser-mock{width:72%;height:65%;background:#fffdfb;border:1px solid #ead5cb;transform:rotate(-3deg)}
+.browser-bar{height:22px;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #eee}.browser-bar i{width:4px;height:4px;border-radius:50%;background:#d8b9ab}.browser-bar span{margin-left:auto;font:7px var(--mono);color:#999}
+.browser-body{padding:17px 15px}.browser-body b{font-size:clamp(18px,2vw,27px);line-height:1;letter-spacing:-1.2px}.browser-body em{font-style:normal;color:var(--accent)}.mock-rule{display:block;width:75%;height:3px;background:#eadbd4;margin-top:16px}.mock-button{display:block;width:45px;height:12px;background:var(--accent);margin-top:12px}
+.code-mock{width:78%;padding:25px 15px;background:#ffffffc9;border:1px solid #d2e0e8;transform:rotate(3deg);font:10px/2.2 var(--mono);box-shadow:8px 9px 0 #34536b08}.code-mock span{display:block;white-space:nowrap}.code-mock i{font-style:normal;color:#9eafbb;display:inline-block;width:23px}.code-mock b{font-weight:500;color:#477c98}.code-mock em{font-style:normal;color:#51825b}.cursor{width:6px;height:10px;background:var(--accent);margin-left:23px}
+.portfolio-mock{width:70%;height:64%;background:#ffffffb8;border:1px solid #d4e0d0;padding:12px;transform:rotate(-2deg)}.mock-nav{height:8px;background:#c9d8c5;margin-bottom:12px}.mock-hero{height:42%;background:#d4e2d0;position:relative}.mock-hero:after{content:"";position:absolute;top:11px;left:11px;width:40%;height:5px;background:#799773;box-shadow:0 10px 0 #a9c0a4,0 20px 0 #a9c0a4}.mock-columns{display:flex;gap:6px;margin-top:9px}.mock-columns i{height:27px;flex:1;background:#dce8d9}
+.project-meta{display:flex;justify-content:space-between;gap:8px;margin-top:17px;color:var(--accent);font-size:8px;letter-spacing:.3px}.project-meta span:last-child{color:#888;text-align:right}
+.project-card h3{font-size:18px;letter-spacing:-.5px;line-height:1.35;margin:10px 0 7px;font-weight:600}.project-card p{font-size:11px;line-height:1.8;color:#555;margin:0;min-height:80px}
+.project-link{display:inline-flex;gap:7px;align-items:center;margin-top:13px;font-size:9px;color:#444}.project-link span{color:var(--accent);font-size:13px}.project-link:hover{color:var(--accent)}.project-static{color:#777}
+.case-study{display:grid;grid-template-columns:.8fr 1.2fr;gap:38px;padding:25px 0;margin-top:45px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-heading h3{font-size:20px;letter-spacing:-.6px;line-height:1.4;margin:10px 0 0;font-weight:600}
+.case-content p{font-size:11px;line-height:1.9;color:#555;margin:0 0 13px}.case-content .concept-note{color:#333;margin-top:18px}
+.case-steps{display:flex;flex-wrap:wrap;gap:7px}.case-steps span{border:1px solid #ddd;padding:7px 9px;font-size:8px;color:#666}
+.about-section{background:#f8f8f7;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:90px}
+.about-copy-block h2{font-size:clamp(36px,4.2vw,50px)}.about-copy-block>p:not(.eyebrow){max-width:480px;font-size:12px;line-height:1.95;color:#555;margin:23px 0 0}
+.about-details{padding-top:7px}.detail-block{padding-bottom:21px;margin-bottom:21px;border-bottom:1px solid #dededc}.detail-block:last-child{margin-bottom:0}
+.detail-block h3{font-size:15px;letter-spacing:-.3px;margin:9px 0 6px;font-weight:600}.detail-block p{font-size:11px;line-height:1.85;color:#555;margin:0;max-width:340px}
+.experience-card{display:grid;grid-template-columns:150px 1fr;gap:32px;border:1px solid var(--line);padding:30px}
+.experience-date{display:flex;flex-direction:column;gap:5px;font:9px var(--mono);letter-spacing:.6px;color:#777}.experience-date small{font-size:8px;color:var(--accent);margin-top:12px}
+.experience-main{border-left:1px solid var(--line);padding-left:30px}.experience-title-row{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}
+.experience-title-row h3{font-size:21px;letter-spacing:-.5px;margin:0}.company{font-size:11px;color:var(--accent);margin:4px 0 0}
+.role-tag{font:8px var(--mono);letter-spacing:.5px;color:#666;border:1px solid #ddd;padding:7px 9px}
+.experience-main ul{padding-left:17px;margin:21px 0;color:#555;font-size:11px;line-height:1.9}.experience-main li{padding-left:4px;margin:6px 0}.experience-main li::marker{color:var(--accent)}
+.strength-note{display:flex;gap:11px;background:#f8f8f7;padding:12px 14px}.strength-note>span{font-size:17px}.strength-note p{font-size:10px;line-height:1.7;color:#555;margin:0}.strength-note strong{color:#111}
+.section-tinted{background:#fbfbfa;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.achievement-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-top:35px}
+.award-card{min-height:218px;border:1px solid var(--line);padding:18px 16px;display:flex;flex-direction:column;background:#fff}
+.award-level{font-size:8px;letter-spacing:.2px;color:#888;line-height:1.7}.award-card h3{font-size:14px;line-height:1.5;margin:20px 0 7px;font-weight:600;letter-spacing:-.3px}.award-result{font-size:11px;color:var(--accent);font-weight:600;margin:0 0 16px}.award-foot{font-size:8px;line-height:1.7;color:#777;border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+.more-achievements{border-top:1px solid var(--line);padding-top:18px;margin-top:23px}.more-achievements p{font-size:10px;line-height:1.8;color:#555;margin:7px 0 0}
+.skills-section{background:#171717;color:#fff}
+.skills-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+.dark-eyebrow{color:#c1c1c1}.skills-intro h2{font-size:clamp(36px,4vw,49px);margin:16px 0}.skills-intro h2 span{color:#c6c6c6}
+.skills-intro>p:not(.eyebrow){max-width:310px;font-size:11px;line-height:1.9;color:#bbb;margin:0 0 24px}
+.light-link{color:#fff}.skills-content{padding-top:5px}.skill-group{margin-bottom:25px}.skill-group h3,.education-list h3{font-size:9px;letter-spacing:1px;font-weight:400;color:#bbb;margin:0 0 13px}
+.skill-pills{display:flex;flex-wrap:wrap;gap:7px}.skill-pills span{border:1px solid #444;padding:7px 9px;font:9px var(--mono);color:#eee}
+.skill-caveat{font-size:8px;line-height:1.8;color:#aaa;margin:10px 0 0}
+.education-list{border-top:1px solid #444;margin-top:30px;padding-top:22px}.education-item{display:flex;gap:12px;padding:10px 0}.edu-marker{width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:7px;flex-shrink:0}
+.education-item h4{font-size:10px;line-height:1.7;margin:0;font-weight:500}.education-item p{font-size:9px;color:#bbb;margin:4px 0 0}.education-item p span{margin-left:8px;color:#999}
+.volunteer-section{display:flex;align-items:center;gap:19px;padding-top:48px;padding-bottom:48px}.volunteer-mark{display:grid;place-items:center;width:43px;height:43px;border:1px solid #ddd;color:var(--accent);font-size:20px}
+.volunteer-section .eyebrow{margin:0 0 5px}.volunteer-section h2{font-size:21px;letter-spacing:-.5px}.volunteer-section p:not(.eyebrow){font-size:10px;color:#555;margin:5px 0 0}.volunteer-section p span{margin-left:9px;color:#888;font-family:var(--mono);font-size:9px}
+.contact-section{border-top:1px solid var(--line);padding:95px 0 100px}.contact-inner .eyebrow{margin-bottom:20px}
+.contact-inner h2{font-size:clamp(58px,8vw,90px);line-height:.98;letter-spacing:-.08em;font-weight:500;margin:0}
+.contact-inner>p:not(.eyebrow){font-size:12px;color:#555;margin:23px 0}
+.email-link{display:inline-block;font-size:16px;color:var(--accent);border-bottom:1px solid #e8b3a5;padding-bottom:7px}.email-link span{display:inline-block;transition:transform .2s}.email-link:hover span{transform:translate(3px,-3px)}
+.social-links{display:flex;gap:20px;flex-wrap:wrap;margin-top:27px;font:9px var(--mono);color:#555}.social-links a{transition:color .2s}.social-links span{color:var(--accent)}
+.site-footer{border-top:1px solid var(--line)}.footer-inner{min-height:67px;display:flex;align-items:center;justify-content:space-between;gap:18px;color:#777;font-size:8px}
+@media(max-width:850px){.hero{grid-template-columns:1fr .8fr;gap:18px}.hero-art{transform:scale(.9)}.hero h1{font-size:clamp(43px,6vw,62px)}.about-layout{gap:45px}.skills-layout{gap:45px}.achievement-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.signal-inner{justify-content:center;padding:18px 0}.signal-label{width:100%;text-align:center}}
+@media(max-width:680px){
+ .container{width:calc(100% - 36px)}.nav{min-height:67px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:20px 18px;flex-direction:column;align-items:flex-start;gap:20px}.nav-links.open{display:flex}
+ .hero{display:flex;flex-direction:column;align-items:stretch;padding-top:60px;padding-bottom:30px;gap:0}.hero h1{font-size:clamp(43px,10.5vw,61px)}.hero-lead{font-size:12px}.hero-art{width:100%;height:340px;transform:scale(.82);transform-origin:top center;margin:25px 0 -45px}.hero-meta{gap:22px}.hero-meta strong{font-size:10px}
+ .signal-inner{gap:11px 15px}.signal-inner span:not(.signal-label){font-size:9px}.signal-inner i{display:none}
+ .section{padding-top:70px;padding-bottom:75px}.section-heading{display:block}.section-heading h2{font-size:38px}.section-count{display:block;margin-top:13px}.section-intro{margin-top:17px}.project-grid{grid-template-columns:1fr;gap:34px}.project-art{aspect-ratio:1.45/1}.project-card p{min-height:0}.browser-body b{font-size:31px}.case-study{grid-template-columns:1fr;gap:18px;margin-top:35px}
+ .about-layout{grid-template-columns:1fr;gap:42px}.about-copy-block h2{font-size:39px}.about-copy-block>p:not(.eyebrow){font-size:11px}
+ .experience-card{grid-template-columns:1fr;gap:18px;padding:22px}.experience-date{flex-direction:row;align-items:center;gap:8px}.experience-date small{margin:0 0 0 auto}.experience-main{border-left:0;padding-left:0}.experience-title-row h3{font-size:19px}.role-tag{display:none}
+ .achievement-grid{grid-template-columns:1fr 1fr;gap:9px}.award-card{padding:15px 12px;min-height:205px}.award-card h3{font-size:12px}.award-level{font-size:7px}
+ .skills-layout{grid-template-columns:1fr;gap:38px}.skills-intro h2{font-size:39px}.volunteer-section{align-items:flex-start;gap:13px;padding-top:38px;padding-bottom:38px}.volunteer-section h2{font-size:18px}.contact-section{padding:75px 0}.contact-inner h2{font-size:clamp(56px,12vw,75px)}.footer-inner{padding:18px 0;flex-wrap:wrap}.footer-inner>span:nth-child(2){display:none}.footer-inner .wordmark{margin-right:auto}
+}
+@media(max-width:390px){.achievement-grid{grid-template-columns:1fr}.award-card{min-height:170px}.hero-meta{flex-direction:column;gap:13px}.hero-art{margin-bottom:-55px}.footer-inner{font-size:7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+
+/* GitHub project repository section */
+.github-projects { margin-top: 5.5rem; padding-top: 3rem; border-top: 1px solid var(--line, #e5e5e5); }
+.subsection-heading { display: flex; justify-content: space-between; align-items: end; gap: 1.5rem; margin-bottom: 1rem; }
+.subsection-heading h3 { margin: .35rem 0 0; font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: -.045em; }
+.github-project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.github-project-card { display: flex; flex-direction: column; min-height: 210px; padding: 1.5rem; border: 1px solid var(--line, #e5e5e5); background: #fff; }
+.repo-index, .repo-owner { font-family: 'DM Mono', monospace; font-size: .68rem; letter-spacing: .04em; color: #777; text-transform: uppercase; }
+.github-project-card h4 { margin: 1.2rem 0 .5rem; font-size: 1.4rem; letter-spacing: -.025em; }
+.github-project-card p { margin: 0 0 1.5rem; color: #555; font-size: .94rem; line-height: 1.65; }
+.repo-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid #eee; }
+.repo-footer a { color: #111; font-size: .85rem; font-weight: 600; text-decoration: none; }
+.repo-footer a:hover { color: #e2552d; }
+@media (max-width: 640px) { .github-project-grid { grid-template-columns: 1fr; } .subsection-heading { align-items: flex-start; flex-direction: column; } .github-project-card { min-height: 0; } }
+
+/* Refined project cards, link interactions, and concise achievements */
+.github-project-card { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+.github-project-card:hover, .github-project-card:focus-within { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 10px 28px rgba(17,17,17,.06); }
+.github-project-card a, .project-link, .email-link, .social-links a, .nav-links a { transition: color .2s ease, opacity .2s ease; }
+.github-project-card a:hover, .github-project-card a:focus-visible, .project-link:hover, .project-link:focus-visible, .email-link:hover, .email-link:focus-visible, .social-links a:hover, .social-links a:focus-visible { color: var(--accent); }
+.github-project-card a:focus-visible, .text-link:focus-visible, .nav-links a:focus-visible, .social-links a:focus-visible, .email-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.main-project-grid .github-project-card { min-height: 260px; }
+.project-card-refined h3 { font-size: 21px; line-height: 1.35; }
+.project-stack { color: var(--muted); font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: 0; }
+.project-card-refined p { font-size: 13px; line-height: 1.75; }
+.project-card-refined p strong { color: var(--ink); font-weight: 600; }
+.project-card-refined .repo-footer { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; }
+.achievement-list { border-top: 1px solid var(--line); }
+.achievement-list p { margin: 0; padding: 17px 0; border-bottom: 1px solid var(--line); font-size: 14px; line-height: 1.6; }
+.resume-button { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--accent); border-radius: 3px; padding: 10px 13px; color: var(--accent) !important; }
+.resume-button:hover, .resume-button:focus-visible { background: var(--accent); color: #fff !important; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+
+/* Portfolio polish */
+.contact-section .resume-button,
+.resume-button {
+  margin-top: 18px;
+  min-height: 46px;
+  justify-content: center;
+  vertical-align: middle;
+}
+.resume-button {
+  background: #fff;
+  text-decoration: none;
+  line-height: 1.4;
+}
+.resume-button:hover,
+.resume-button:focus-visible {
+  background: var(--accent);
+  color: #fff !important;
+}
+.experience-link {
+  margin-top: 12px;
+  font-size: 13px;
+}
+.experience-link a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+.experience-link a:hover,
+.experience-link a:focus-visible {
+  opacity: .75;
+}
+
+
+/* Keep the résumé download on a separate line below the social links. */
+.contact-section .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 14px;
+}
+.contact-section .social-links .resume-button {
+  flex: 0 0 100%;
+  width: fit-content;
+  margin-top: 4px;
+  margin-left: 0;
+  order: 3;
+}
+.contact-section .social-links .resume-button::before {
+  content: "";
+  flex-basis: 100%;
+}
+
+
+/* Compact résumé button on its own line; never stretch it across the contact section. */
+.contact-section .social-links {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: start;
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 16px;
+}
+.contact-section .social-links .resume-button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  display: inline-flex;
+  width: auto;
+  max-width: max-content;
+  min-width: 0;
+  flex: initial;
+  margin: 0;
+  padding: 10px 13px;
+  white-space: nowrap;
+}
+.contact-section .social-links .resume-button::before {
+  content: none;
+}
+@media (max-width: 420px) {
+  .contact-section .social-links {
+    grid-template-columns: max-content;
+  }
+  .contact-section .social-links .resume-button {
+    grid-column: 1;
+  }
+}
